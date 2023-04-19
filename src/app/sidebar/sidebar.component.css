@@ -1,9 +1,14 @@
 *{
     font-family: sans-serif;
     font-size:12px;
+    color: white;
+     font-weight: bold;
 }
-.sidebar{
-    width: 15%;
+.form-check{
+    background-color: #2f4f4f;
+}
+.col{
+    background-color: #2f4f4f;
 }
 ul{ 
     display: block;

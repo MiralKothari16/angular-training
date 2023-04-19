@@ -1,3 +1,6 @@
+*{
+    background-color: #2f4f4f;
+}
 .Cards{
     display: grid;
     place-items: center;
@@ -6,7 +9,7 @@
     grid-template-columns: repeat(3,auto);
     /* grid-gap:rem; */
     grid-template-columns: auto auto auto;
-    background-color: #2f4f4f;
+    
 }
 .item{  
     /* margin :3px; */
