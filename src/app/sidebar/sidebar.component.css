@@ -3,6 +3,10 @@
     font-size:12px;
     color: white;
      font-weight: bold;
+    
+}
+.sidebar{
+    height: 80%;
 }
 .form-check{
     background-color: #2f4f4f;

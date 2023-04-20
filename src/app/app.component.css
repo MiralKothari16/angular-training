@@ -1,5 +1,24 @@
  *{
-    color: white;
-    font-family: sans-serif;
-    
+    color:#ffff;
+    font-family: sans-serif; 
+    font-weight: bold;
+   }
+  h3{color:#2f4f4f;
+   margin-top: 15px;
+  }  
+ label{
+   color:#2f4f4f;
+   font-size: 14px;
+ }
+ button{
+   color: #ffffff;
+ }
+ .img-rounded{
+   height: 350px;
+   width: 250px;
+ }
+ .addtocart{
+   height: 50px;
+   width: 50px;
+   float:right;
  }
