@@ -3,7 +3,7 @@
     font-family: sans-serif; 
     font-weight: bold;
    }
-  h3{color:#2f4f4f;
+  /* h3{color:#2f4f4f;
    margin-top: 15px;
   }  
  label{
@@ -21,7 +21,7 @@
    height: 50px;
    width: 50px;
    float:right;
- }
+ } */
  li a{
   cursor:pointer;
  }

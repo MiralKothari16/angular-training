@@ -3,3 +3,23 @@ lable{
     font-weight: bold;
     font-size: 12px;
 }
+
+h3{color:#2f4f4f;
+    margin-top: 15px;
+   }  
+  label{
+    color:#2f4f4f;
+    font-size: 14px;
+  }
+  button{
+    color: #ffffff;
+  }
+  .img-rounded{
+    height: 350px;
+    width: 250px;
+  }
+  .addtocart{
+    height: 50px;
+    width: 50px;
+    float:right;
+  }

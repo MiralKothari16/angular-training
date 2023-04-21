@@ -12,7 +12,7 @@ import { CoreModule } from './core/core.module';
     CommonErrorComponent,
   ],
   imports: [
-    BrowserModule,CoreModule
+    BrowserModule,CoreModule 
     //AppRoutingModule
   ],
   providers: [],
