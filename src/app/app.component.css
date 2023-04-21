@@ -22,3 +22,6 @@
    width: 50px;
    float:right;
  }
+ li a{
+  cursor:pointer;
+ }
