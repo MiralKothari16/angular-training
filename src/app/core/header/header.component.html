@@ -1,32 +1,23 @@
-
-
-<body>
-    <div class="container-fluid  p-3 text-center">
-        <h1>Prime Book Shop</h1>
-    </div>
-    <nav class="navbar navbar-expand-small">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-8">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="navr-link" href="">Dashboard</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Today's Deal</a></li>
-                        <li class="nav-item"><a clas="nav-link" href="">Mobile</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Electronics</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Customer service</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">About</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <input type="text" placeholder="search" class="form-control bg-white border=none"/>
-                </div>
-                <div class="col-sm-1">
-                    <button type="submit" class="btn btn-primery">Search</button>   
-                </div>
+<div class="container-fluid  p-3 text-center bg-color-gray">
+    <span class="navbar-brand mb-0 fw-bold display-font-sizes-5rem">{{navbarTitle}}</span>
+    <!-- <h1>Prime Book Shop</h1> -->
+</div>
+<nav class="navbar navbar-expand-small">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <ul class="navbar-nav">
+                    <li class="nav-item" *ngFor="let hrefLink of navbarLinkList">
+                        <a [href]="hrefLink.href">{{hrefLink.title}}</a>
+                    </li>
+                </ul>
             </div>
-
+            <div class="col-sm-3">
+                <input type="text" placeholder="search" class="form-control bg-white border=none" />
+            </div>
+            <div class="col-sm-1">
+                <button type="submit" class="btn btn-primery">Search</button>
+            </div>
         </div>
-    </nav>
-
-</body>
-
+    </div>
+</nav>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CommonErrorComponent } from './common-error.component';
+import { ErrorDemoComponent } from './error-demo.component';
 
-describe('CommonErrorComponent', () => {
-  let component: CommonErrorComponent;
-  let fixture: ComponentFixture<CommonErrorComponent>;
+describe('ErrorDemoComponent', () => {
+  let component: ErrorDemoComponent;
+  let fixture: ComponentFixture<ErrorDemoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommonErrorComponent ]
+      declarations: [ ErrorDemoComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CommonErrorComponent);
+    fixture = TestBed.createComponent(ErrorDemoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

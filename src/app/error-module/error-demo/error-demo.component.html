@@ -1,0 +1,12 @@
+
+<form>
+    <input type="text" name="firstName" [(ngModel)]="firstName"/>
+    <button type="button" (click)="addName()" >Add Name</button>
+    <ul>
+        <li *ngFor="let name of names; let i = index">
+           <!-- {{name.firstName}} -->
+           <button type="button"(click)="deleteName(i)">Delete Name</button>
+        </li>
+    </ul>
+    <button type="button" (click)="displayName()">Display Name</button>
+</form>

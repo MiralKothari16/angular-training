@@ -3,16 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CommonErrorComponent } from './common-error/common-error.component';
-import { CoreModule } from './core/core.module';
 
+import { CoreModule } from './core/core.module';
+import { ErrorModuleModule } from './error-module/error-module.module';
 
 @NgModule({
-  declarations: [AppComponent,
-    CommonErrorComponent,
+  declarations: [AppComponent,  
+   // CommonErrorComponent,
   ],
   imports: [
-    BrowserModule,CoreModule 
+    BrowserModule,CoreModule ,ErrorModuleModule
     //AppRoutingModule
   ],
   providers: [],
