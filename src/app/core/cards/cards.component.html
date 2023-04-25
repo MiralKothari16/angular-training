@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <h3>On Display</h3>
+    </div>
+    <div class="row">
+        <div class="cards">
+            <div class="col-sm-3">
+                <img [src]="books.imageUrl" class="mainimage">
+                <h5>{{books.title}}</h5>
+                <p>{{books.description}}</p>
+                <p>{{books.price}}</p>
+                <img [src]="books.imghref" class="addtocart" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3>Today's great deal</h3>
+    </div>
+    <div class="row">
+        <h3>Best seller of the month</h3>
+    </div>
+</div>

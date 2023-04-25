@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 33.33%;
+    padding: 5px;
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 20px;
+    margin-left: 5px;
+    gap: 10px;
+    width: 250px;
+    height: 350px;
+}
+
+.Cards>div {
+    border-radius: 10px;
+    padding: 2px;
+    height: 50px;
+    width: 35px;
+}
+
+.mainimage {
+    width: 250px;
+    height: 350px;
+}
+
+.addtocart {
+    height: 50px;
+    width: 50px;
+    /* // float: right; */
+}
