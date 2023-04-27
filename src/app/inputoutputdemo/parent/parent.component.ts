@@ -9,9 +9,25 @@ import { ChildComponent } from '../child/child.component';
 export class ParentComponent implements OnInit {
 
   welcomeText = "";
+
+
+  public salesProducts = [
+    { Id: 1, Name: 'Mobile', price: '10000' },
+    { Id: 1, Name: 'TV', price: '40000' },
+    { Id: 1, Name: 'Cloths', price: '1000' },
+    { Id: 1, Name: 'Books', price: '1000' },
+  ];
+  public TopProducts = [
+    { Id: 1, Name: 'Mobile', price: '10000' },
+    { Id: 1, Name: 'TV', price: '40000' },
+    { Id: 1, Name: 'Cloths', price: '1000' },
+    { Id: 1, Name: 'Books', price: '1000' },
+  ];
+
   ngOnInit(): void {
     // console.log(this.messageToChild);
   }
+
   welcomeParent() {
     this.welcomeText = "Welcome Parent";
   }

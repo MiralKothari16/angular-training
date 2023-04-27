@@ -3,3 +3,23 @@
 <span>Child Component: {{Item}} </span>
 <button (click)="welcome()">Welcome!</button>
 <!-- <h2>{{myNewNumber}}</h2> -->
+
+<div class="container-flex">
+    <h3>Content Projecion Demp</h3>
+    <div>
+        <ng-content select=".header"></ng-content>
+        <ul class="list-group" *ngFor="let prod of Products">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{prod.Name}}
+                <span class="badge bg-primary rounded-pill">{{prod.Price}}</span>
+            </li>
+        </ul>
+        <ng-content select=".link"></ng-content>
+    </div>
+
+
+
+    <!-- <button class="btn btn-primary" (click)="data.toggle">Click Me</button> -->
+
+
+</div>
