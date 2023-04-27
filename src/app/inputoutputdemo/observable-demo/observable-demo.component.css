@@ -1,0 +1,19 @@
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    border: 2px solid gray;
+    margin-top: 22px;
+
+}
+
+.flex-container>h3 {
+    align-items: center;
+    color: darkgrey
+}
+
+.flex-container>a {
+    align-items: left;
+    margin: 10px;
+    font-size: 24px;
+    padding: 20px;
+}

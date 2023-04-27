@@ -13,7 +13,7 @@ import { InputoutputdemoModule } from './inputoutputdemo/inputoutputdemo.module'
     // CommonErrorComponent,
   ],
   imports: [
-    BrowserModule, CoreModule, ErrorModuleModule, InputoutputdemoModule
+    BrowserModule, CoreModule, ErrorModuleModule, InputoutputdemoModule,
     //AppRoutingModule
   ],
   providers: [],

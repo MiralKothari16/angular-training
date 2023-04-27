@@ -1,9 +1,10 @@
- *{
-    color:#ffff;
-    font-family: sans-serif; 
-    font-weight: bold;
-   }
-  /* h3{color:#2f4f4f;
+ * {
+   /* color:#ffff; */
+   font-family: sans-serif;
+   font-weight: bold;
+ }
+
+ /* h3{color:#2f4f4f;
    margin-top: 15px;
   }  
  label{
@@ -22,6 +23,6 @@
    width: 50px;
    float:right;
  } */
- li a{
-  cursor:pointer;
+ li a {
+   cursor: pointer;
  }
