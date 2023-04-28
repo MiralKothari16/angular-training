@@ -14,7 +14,7 @@ export class ChildComponent implements OnInit, OnChanges {
 
   @Input() messageToChild !: string;
   @Input() Item !: string;
-  @Input() Products: [];
+  @Input() Products !: any[];
   //private myNumber: number = 0;
 
   constructor() {

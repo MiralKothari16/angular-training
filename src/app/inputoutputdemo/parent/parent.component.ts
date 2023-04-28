@@ -18,10 +18,10 @@ export class ParentComponent implements OnInit {
     { Id: 1, Name: 'Books', price: '1000' },
   ];
   public TopProducts = [
-    { Id: 1, Name: 'Mobile', price: '10000' },
-    { Id: 1, Name: 'TV', price: '40000' },
-    { Id: 1, Name: 'Cloths', price: '1000' },
-    { Id: 1, Name: 'Books', price: '1000' },
+    { Id: 1, Name: 'cloths', price: '20000' },
+    { Id: 1, Name: 'Ornaments', price: '40000' },
+    { Id: 1, Name: 'Cosmetics', price: '10000' },
+    { Id: 1, Name: 'Toys', price: '5000' },
   ];
 
   ngOnInit(): void {

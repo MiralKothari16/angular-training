@@ -2,19 +2,21 @@
 <!-- <app-child [messageToChild]="messageToChild" (welcomeParent1)="welcomeParent()"></app-child> -->
 <h1>Angular Lifecycle Hook</h1>
 <div>
-    <app-child [messageToChild]="messageToChild" [Item]="ItemData">
-    </app-child>
+    <!-- <app-child [messageToChild]="messageToChild" [Item]="ItemData">
+    </app-child> -->
     <button (click)="onChangeData()">Change Data</button>
 </div>
-<div>
-    <app-child [Products]="salesProducts">
-        <h3 class="header">Up to 70% off on Electronic Items</h3>
-        <a class="link" href="#">Visit Store...</a>
-    </app-child>
-</div>
-<div>
-    <app-child [Products]="TopProduces">
-        <h3 class="header">Top Products </h3>
-        <a class="link" href="#">See More...</a>
-    </app-child>
+<div class="row">
+    <div class="col-sm-6">
+        <app-child [Products]="salesProducts">
+            <h3 class="header">Up to 70% off on Electronic Items</h3>
+            <a class="link" href="#">Visit Store...</a>
+        </app-child>
+    </div>
+    <div class="col-sm-6">
+        <app-child [Products]="TopProducts">
+            <h3 class="header">Top Products </h3>
+            <a class="link" href="#">See More...</a>
+        </app-child>
+    </div>
 </div>
