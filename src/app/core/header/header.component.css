@@ -4,44 +4,51 @@
     color: white;
 }
 
- .header{
-        display: flex;
-        justify-content: center;
-        background-color:#2f4f4f;
-    } 
-h1{
-    color:#ffffff;
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: #2f4f4f;
+}
+
+h1 {
+    color: #ffffff;
     margin-left: 10px;
-    }
-ul{ 
+}
+
+ul {
     display: block;
     list-style-type: none;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-    background-color: #2f4f4f;;
+    background-color: #2f4f4f;
+    ;
 }
-li{
+
+li {
     float: left;
     /* border-right: 1px solid #bbb; */
 }
-li:last-child{
+
+li:last-child {
     /* border-right:none; */
-    
+
 }
-li a{
-     display:block; 
+
+li a {
+    display: block;
     color: #ffffff;
-    text-align:  center;
-    padding:10px 14px;
+    text-align: center;
+    padding: 10px 14px;
     text-decoration: none;
     font: size 14px;
-    font-weight: bold   ;
-    
+    font-weight: bold;
 }
-li a:hover{
+
+li a:hover {
     background-color: #696969;
 }
-button{
+
+button {
     background-color: green;
 }

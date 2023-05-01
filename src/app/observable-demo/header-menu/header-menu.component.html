@@ -1,0 +1,67 @@
+<!-- <p>header-menu works!</p>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<div class="container-fluid  p-3 text-center bg-color-gray">
+    <a class="navbar-brand" href="#">Observable and Promises</a>
+    <div class="badge badge-primary">Exclisive</div>
+</div>
+<nav class="navbar navbar-expand-small">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#">Promises</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Observable</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+             <input type="text" placeholder="search" class="form-control bg-white border=none" />
+            </div>
+            <div class="col-sm-1">
+             <button type="submit" class="btn btn-primery">Search</button> 
+            </div>
+        </div>
+    </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Observable and Promises</a>
+        <strong *ngIf="exclusive">Exclusive</strong>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Promises</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Observable</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>

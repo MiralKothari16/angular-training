@@ -2,6 +2,7 @@
 <!-- <app-child [messageToChild]="messageToChild" (welcomeParent1)="welcomeParent()"></app-child> -->
 <h1>Angular Lifecycle Hook</h1>
 <div>
+
     <!-- <app-child [messageToChild]="messageToChild" [Item]="ItemData">
     </app-child> -->
     <button (click)="onChangeData()">Change Data</button>
@@ -19,4 +20,26 @@
             <a class="link" href="#">See More...</a>
         </app-child>
     </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <h3> custom directive demo</h3>
+        <button class="btn btn-primary" (click)="isAvailable =! isAvailable"> toggle Condition</button>
+        <div *ngIf="isAvailable">show the div when isAvailable is true</div>
+
+        <!-- <ng-template [ngIf]="isAvailable">
+        <div>SHow the div when isAvailable is true.</div>
+    </ng-template> -->
+        <!-- <div *AlternateIf="isAvailable" ></div> -->
+        <div *appAlternateIf="isAvailable">This condition enables with custom directive</div>
+        <h3> example on ngswitchcase</h3>
+        <div [ngSwitch]="value">
+            <div *ngSwitchCase="10">value is 10</div>
+            <div *ngSwitchCase="15">value is 15</div>
+            <div *ngSwitchCase="20">value is 20</div>
+            <div *ngSwitchDefault>Value is default</div>
+
+        </div>
+    </div>
+
 </div>

@@ -7,9 +7,10 @@ import { ChildComponent } from '../child/child.component';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-
+  isAvailable: boolean = true;
+  value = 10;
   welcomeText = "";
-
+  constructor() { }
 
   public salesProducts = [
     { Id: 1, Name: 'Mobile', price: '10000' },

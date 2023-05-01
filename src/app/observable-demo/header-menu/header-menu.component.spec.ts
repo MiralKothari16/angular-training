@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ObservableDemoComponent } from './observable-demo.component';
+import { HeaderMenuComponent } from './header-menu.component';
 
-describe('ObservableDemoComponent', () => {
-  let component: ObservableDemoComponent;
-  let fixture: ComponentFixture<ObservableDemoComponent>;
+describe('HeaderMenuComponent', () => {
+  let component: HeaderMenuComponent;
+  let fixture: ComponentFixture<HeaderMenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ObservableDemoComponent ]
+      declarations: [ HeaderMenuComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ObservableDemoComponent);
+    fixture = TestBed.createComponent(HeaderMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
