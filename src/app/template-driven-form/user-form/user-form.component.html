@@ -1,0 +1,85 @@
+<div class="container">
+    <h2>Template Driven Form</h2>
+    <form class="form-horizontal" (ngSubmit)="onSubmit()" #f="ngForm">
+        <div class-="form-group">
+            <label class="control-label col-sm-2" for="firstname">First Name:</label>
+            <div class="col-sm-8">
+                <input type="firstname" class="form-control" id="firstname" placeholder="Enter First Name" ngModel
+                    name="firstname" required>
+            </div>
+            <!-- <span class="color-red">Please enter First Name</span> -->
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="lastname">Last Name:</label>
+            <div class="col-sm-8">
+                <input type="lastname" class="form-control" id="lastname" placeholder="Enter Last Name" ngModel
+                    name="lastname" required>
+            </div>
+            <!-- <span class="color-red" *ngIf="!email.valid && email.touched" >Please enter Last Name</span> -->
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-8">
+                <input type="email" class="form-control" id="email" placeholder="Enter Email" ngModel name="email"
+                    required email #email="ngModel">
+            </div>
+            <span class="color-red" *ngIf="!email.valid && email.touched">Please enter valid Email</span>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="Password">Password</label>
+            <div class="col-sm-8">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" ngModel name="pwd"
+                    required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <label for="location">Location: </label>
+                <select class="form-control" id="Location" name="location" [(ngModel)]="location">
+                    <option value="AHD">Ahmedabad</option>
+                    <option value="BRD">Baroda</option>
+                    <option value="RJT">Rajkot</option>
+                </select>
+            </div>
+            <!-- <p><b> {{location}} </b></p>  // if you seleet ahemedabad will set ahd ,if baroda will set brd by two binding -->
+        </div>
+        <div class="form-ckeck" *ngFor="let gender of genders">
+            <input class="form-check-input" type="radio" name="gender" [id]="gender" [value]="gender" ngModel />
+            <label class="form-check-label" [for]="gender">{{gender}}</label>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label><input type="checkbox" ngModel name="remember" /> Remember Me</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button> &nbsp;
+                <button type="reset" class="btn btn-primary" [disabled]="!f.valid" (click)="reset()">reset</button><br>
+            </div>
+        </div><br>
+
+        <div class="Form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" class="btn btn-primary" (click)="setvalueMethod()">
+                    Fill Form using Set value method.
+                </button>&nbsp;
+                <button type="button" class="btn btn-primary" (click)="patchvalueMethod()">
+                    Fill value using Patch value method.
+                </button>
+            </div>
+        </div>
+        <div class="row" *ngIf="submitted">
+            <div class="col-xs-12">
+                <h4>Your Data</h4>
+                <p>Email ID: {{ user.email }}</p>
+                <p>Password: {{ user.pwd }}</p>
+                <p>Location: {{ user.location }}</p>
+                <p>Gender: {{ user.gender }}</p>
+                <p>Remember Me: {{ user.remember }}</p>
+            </div>
+        </div>
+    </form>
+</div>

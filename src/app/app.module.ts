@@ -11,6 +11,10 @@ import { Observable } from 'rxjs';
 import { ObservableDemoModule } from './observable-demo/observable-demo.module';
 import { Directive1Directive } from './directive-demo/directive1.directive';
 import { AlternatIfDiractive } from './directive-demo/AlternateIf.directive';
+import { EmployeeModule } from './employee/employee.module';
+import { EmployeeService } from './employee/employee.service';
+import { TemplateDrivenFormModule } from './template-driven-form/template-driven-form.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,10 +22,11 @@ import { AlternatIfDiractive } from './directive-demo/AlternateIf.directive';
     // CommonErrorComponent,
   ],
   imports: [
-    BrowserModule, CoreModule, ErrorModuleModule, InputoutputdemoModule, ObservableDemoModule,
+    BrowserModule, CoreModule, ErrorModuleModule, InputoutputdemoModule, ObservableDemoModule, EmployeeModule,
+    TemplateDrivenFormModule, FormsModule
     //AppRoutingModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
