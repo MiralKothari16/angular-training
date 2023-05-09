@@ -18,4 +18,5 @@ export class EmployeesalaryComponent implements OnInit {
   ngOnInit(): void {
     console.log('calling from summary component :- ', this._employeeservice.showSalary());
   }
+  // addEmployee() { }
 }

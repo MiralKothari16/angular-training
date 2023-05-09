@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { CoreModule } from './core/core.module';
 import { ErrorModuleModule } from './error-module/error-module.module';
 import { InputoutputdemoModule } from './inputoutputdemo/inputoutputdemo.module';
@@ -15,6 +13,8 @@ import { EmployeeModule } from './employee/employee.module';
 import { EmployeeService } from './employee/employee.service';
 import { TemplateDrivenFormModule } from './template-driven-form/template-driven-form.module';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormModule } from './reactive-form/reactive-form.module';
+
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule, CoreModule, ErrorModuleModule, InputoutputdemoModule, ObservableDemoModule, EmployeeModule,
-    TemplateDrivenFormModule, FormsModule
+    TemplateDrivenFormModule, ReactiveFormModule, FormsModule
     //AppRoutingModule
   ],
   providers: [EmployeeService],

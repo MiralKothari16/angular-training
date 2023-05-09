@@ -24,7 +24,7 @@ export class UserFormComponent implements OnInit {
     this.user.firstname = this.firstTDFrom.value.firstname;
     this.user.lastname = this.firstTDFrom.value.lastname;
     this.user.email = this.firstTDFrom.value.email;
-    this.user.email = this.firstTDFrom.value.pwd;
+    this.user.pwd = this.firstTDFrom.value.pwd;
     this.user.location = this.firstTDFrom.value.location;
     this.user.gender = this.firstTDFrom.value.gender;
     this.user.remember = this.firstTDFrom.value.remember;
@@ -34,7 +34,7 @@ export class UserFormComponent implements OnInit {
       firstname: 'Miral',
       lastname: 'Kothari',
       email: 'mm@g.com',
-      pwd: 12345,
+      pwd: '12345',
       location: 'RJT',
       gender: 'Female',
       remember: true
@@ -49,6 +49,8 @@ export class UserFormComponent implements OnInit {
       gender: 'Female'
     })
   }
-  reset() { this.firstTDFrom.reset(); }
-
+  reset() {
+    this.firstTDFrom.reset();
+    this.submitted = false;
+  }
 }
