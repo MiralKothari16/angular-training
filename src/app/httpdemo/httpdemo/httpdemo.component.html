@@ -1,0 +1,16 @@
+<p>httpdemo works!</p>
+<form class="form-horizontal" (ngSubmit)="onSubmit(firstTDFrom)" #f="ngForm">
+    <div class-="form-group">
+        <label class="control-label col-sm-2" for="firstname">First Name:</label>
+        <div class="col-sm-8">
+            <input type="firstname" class="form-control" id="firstname" placeholder="Enter First Name" ngModel
+                name="firstname" required>
+        </div>
+        <!-- <span class="color-red">Please enter First Name</span> -->
+    </div>
+
+</form>
+<button type="button" (click)="AddUser()">Add User</button>
+<button type="button" (click)="GetUser()">GetUser</button>
+<button type="button" (click)="DeleteUser()">DeleteUser</button>
+<button type="button" (click)="UpdateUser()">UpdateUser</button>

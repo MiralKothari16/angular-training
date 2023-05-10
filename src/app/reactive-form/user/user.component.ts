@@ -48,13 +48,13 @@ export class UserComponent implements OnInit {
 
   }
 
-  // checkForbiddenPasswords(control: FormControl): { [k: string]: boolean } {
-  //   if (this.forbiddenPasswords.indexOf(control.value) !== -1) {
-  //     return { passwordForbidden: true };
-  //   }
-  //   // return { 'passwordForbidden': false }; // this will not work. So return null
-  //   return false;
-  // }
+  checkForbiddenPasswords(control: FormControl): { [k: string]: boolean } {
+    if (this.forbiddenPasswords.indexOf(control.value) !== -1) {
+      return { passwordForbidden: true };
+    }
+    return { 'passwordForbidden': false }; // this will not work. So return null
+    //return false;
+  }
 
   checkForbiddenEmail(control: FormControl): Promise<any> | Observable<any> {
     const promise = new Promise<any>((resolve, reject) => {

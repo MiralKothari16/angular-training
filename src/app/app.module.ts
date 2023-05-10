@@ -14,16 +14,18 @@ import { EmployeeService } from './employee/employee.service';
 import { TemplateDrivenFormModule } from './template-driven-form/template-driven-form.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormModule } from './reactive-form/reactive-form.module';
-
+import { PipesDemoModule } from './pipes-demo/pipes-demo.module';
+import { HttpdemoModule } from './httpdemo/httpdemo.module';
+import { HttpClientModule } from '@angular/common/http';
+import { UsrInrPipe } from './pipes-demo/usr-inr.pipe';
 
 
 @NgModule({
-  declarations: [AppComponent, Directive1Directive, AlternatIfDiractive
-    // CommonErrorComponent,
+  declarations: [AppComponent, Directive1Directive, AlternatIfDiractive, UsrInrPipe,    // CommonErrorComponent,
   ],
   imports: [
     BrowserModule, CoreModule, ErrorModuleModule, InputoutputdemoModule, ObservableDemoModule, EmployeeModule,
-    TemplateDrivenFormModule, ReactiveFormModule, FormsModule
+    TemplateDrivenFormModule, ReactiveFormModule, FormsModule, PipesDemoModule, HttpdemoModule, HttpClientModule
     //AppRoutingModule
   ],
   providers: [EmployeeService],

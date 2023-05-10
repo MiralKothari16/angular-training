@@ -12,7 +12,15 @@ export class UserFormComponent implements OnInit {
   location = "AHD";
   genders = ['Male', 'Female'];
   submitted = false;
-  user = { firstname: '', lastname: '', email: '', pwd: '', location: '', gender: '', remember: false };
+  user = {
+    firstname: '',
+    lastname: '',
+    email: '',
+    pwd: '',
+    location: '',
+    gender: '',
+    remember: false
+  };
 
   constructor() { }
   ngOnInit(): void {

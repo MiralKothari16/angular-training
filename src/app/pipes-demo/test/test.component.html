@@ -1,0 +1,20 @@
+<h3>{{name}}</h3>
+<h3>{{name | lowercase}}</h3>
+<h3>{{name | uppercase}}</h3>
+<h3>{{name | slice:3}}</h3>
+<h3>{{name | slice:3:5}}</h3>
+<h3>{{message | titlecase}}</h3>
+<h3>{{person | json}}</h3>
+<h3>{{number | number :'1.2-3'}}</h3>
+<!--here 1 means the minimum number of the digits of integer place , 2 shows the minimum 2 ditits of the decimal place  +, 3 means maximum number of the decimal degit-->
+<h3>{{number | number :'3.4-5'}}</h3>
+<h3>{{number | number :'3.1-2'}}</h3>
+<h3>{{ perc |percent }}</h3>
+<h3>{{ amount | currency :"INR" }}</h3>
+<h3>{{date }}</h3>
+<h3>{{date | date:'short' }}</h3>
+<h3>{{date | date :'dd/MM/yy'}}</h3>
+<h3>{{date | date :'shortDate'}}</h3>
+<h3>{{date | date :'shortTime'}}</h3><br>
+<h2>Custom Pipe convert USD to INR</h2>
+<!-- <h3>{{ usdamt | usdInr}}</h3>  -->
