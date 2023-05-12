@@ -1,4 +1,4 @@
-<!-- <!-- <div class="form-group">
+<!-- <div class="form-group">
     <label>Employee Code:</label>
     <input type="text" class="form-control" [(ngModel)]="employee.employeecode" aria-placeholder="Employee Code">
 </div>
@@ -13,34 +13,37 @@
 <div class="form-group">
     <label>Employee Name</label>
     <input type="text" class="form-control" [(ngModel)]="employee.employeeDOB" aria-placeholder="Employee DOB">
-</div> 
-<input type="button" class="btn btn-primary" (click)="addEmployee()" value="Add Employee" />
+</div>
+ <input type="button" class="btn btn-primary" (click)="addEmployee()" value="Add Employee" />
 <input type="button" class="btn btn-primary" (click)="getTotalEmployeeCount()"
     value="Show/Hide totalemployee Component" /> -->
 
 
-<!-- <h3> Employee List</h3>
+<h3> Employee List</h3>
+
+<app-employeesalary></app-employeesalary><br>
+
 <table>
     <thead>
         <th>Code</th>
         <th>Name</th>
-        <th>Gender</th>
+        <!-- <th>Gender</th> -->
         <th>Salary</th>
-        <th>DOB</th>
+        <!-- <th>DOB</th> -->
     </thead>
     <tbody>
         <tr *ngFor="let employee of employees">
             <td>{{employee.code}}</td>
             <td>{{employee.name}}</td>
-            <td>{{employee.gender}}</td>
+            <!-- <td>{{employee.gender}}</td> -->
             <td>{{employee.salary}}</td>
-            <td>{{employee.DOB}}</td>
+            <!-- <td>{{employee.DOB}}</td> -->
         </tr>
     </tbody>
 </table>
 
 <input type="button" class="btn btn-primary" (click)="getTotalEmployeeCount()"
-    value="Show/Hide totalemployee Component" /> -->
+    value="Show/Hide total employee Count:" />
 
 <hr>
-<app-employeesalary *ngIf="isShowSalary"></app-employeesalary><br>
+<!-- *ngIf="isShowSalary" -->

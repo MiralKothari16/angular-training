@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav flex-column nav-pills">
+                <li class="nav-item"><a class="nav-link active " routerLink="/" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+                <!--routerlink will stop of refreshin page everytime -->
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/users" routerLinkactive="active">Users</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="['/categories']"
+                        routerLinkActive="active">Categories</a></li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- <app-home></app-home>
+                    <app-users></app-users>
+                    <app-categories></app-categories> -->
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

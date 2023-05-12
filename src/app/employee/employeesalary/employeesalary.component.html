@@ -1,1 +1,17 @@
 <p>employeesalary works!</p>
+<form>
+    <div>
+        <input type="text" id="code" placeholder="Code" [(ngModel)]="code" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div>
+        <input type="text" id="Name" placeholder="Name" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div>
+        <input type="text" id="Salary" placeholder="Salary" [(ngModel)]="salary" [ngModelOptions]="{standalone: true}">
+    </div>
+
+    <br>
+    <div>
+        <button class=" btn btn-primary" (click)="addEmployee()">Create Employee</button>
+    </div>
+</form>

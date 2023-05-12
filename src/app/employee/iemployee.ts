@@ -1,8 +1,8 @@
 export interface IEmployee {
     code: string;
     name: string;
-    gender: string;
+    //  gender: string;
     salary: number;
-    DOB: string;
+    ///DOB: string;
 }
 

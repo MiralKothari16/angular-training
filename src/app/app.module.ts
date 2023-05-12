@@ -10,7 +10,7 @@ import { ObservableDemoModule } from './observable-demo/observable-demo.module';
 import { Directive1Directive } from './directive-demo/directive1.directive';
 import { AlternatIfDiractive } from './directive-demo/AlternateIf.directive';
 import { EmployeeModule } from './employee/employee.module';
-import { EmployeeService } from './employee/employee.service';
+//import { EmployeeService } from './employee/employee.service';
 import { TemplateDrivenFormModule } from './template-driven-form/template-driven-form.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormModule } from './reactive-form/reactive-form.module';
@@ -18,6 +18,8 @@ import { PipesDemoModule } from './pipes-demo/pipes-demo.module';
 import { HttpdemoModule } from './httpdemo/httpdemo.module';
 import { HttpClientModule } from '@angular/common/http';
 import { UsrInrPipe } from './pipes-demo/usr-inr.pipe';
+import { RoutingDemoModule } from './routing-demo/routing-demo.module';
+//import { RouterModule, Routes } from '@angular/router';
 
 
 @NgModule({
@@ -25,10 +27,10 @@ import { UsrInrPipe } from './pipes-demo/usr-inr.pipe';
   ],
   imports: [
     BrowserModule, CoreModule, ErrorModuleModule, InputoutputdemoModule, ObservableDemoModule, EmployeeModule,
-    TemplateDrivenFormModule, ReactiveFormModule, FormsModule, PipesDemoModule, HttpdemoModule, HttpClientModule
+    TemplateDrivenFormModule, ReactiveFormModule, FormsModule, PipesDemoModule, HttpdemoModule, HttpClientModule, RoutingDemoModule
     //AppRoutingModule
   ],
-  providers: [EmployeeService],
+  // providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
