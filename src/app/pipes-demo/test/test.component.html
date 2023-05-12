@@ -1,20 +1,21 @@
-<h3>{{name}}</h3>
-<h3>{{name | lowercase}}</h3>
-<h3>{{name | uppercase}}</h3>
-<h3>{{name | slice:3}}</h3>
-<h3>{{name | slice:3:5}}</h3>
-<h3>{{message | titlecase}}</h3>
-<h3>{{person | json}}</h3>
-<h3>{{number | number :'1.2-3'}}</h3>
+<h2 style="color:red;">Pipes Demo</h2>
+<h4>{{name}}</h4>
+<h4>{{name | lowercase}}</h4>
+<h4>{{name | uppercase}}</h4>
+<h4>{{name | slice:3}}</h4>
+<h4>{{name | slice:3:5}}</h4>
+<h4>{{message | titlecase}}</h4>
+<h4>{{person | json}}</h4>
+<h4>{{number | number :'1.2-3'}}</h4>
 <!--here 1 means the minimum number of the digits of integer place , 2 shows the minimum 2 ditits of the decimal place  +, 3 means maximum number of the decimal degit-->
-<h3>{{number | number :'3.4-5'}}</h3>
-<h3>{{number | number :'3.1-2'}}</h3>
-<h3>{{ perc |percent }}</h3>
-<h3>{{ amount | currency :"INR" }}</h3>
-<h3>{{date }}</h3>
-<h3>{{date | date:'short' }}</h3>
-<h3>{{date | date :'dd/MM/yy'}}</h3>
-<h3>{{date | date :'shortDate'}}</h3>
-<h3>{{date | date :'shortTime'}}</h3><br>
+<h4>{{number | number :'3.4-5'}}</h4>
+<h4>{{number | number :'3.1-2'}}</h4>
+<h4>{{ perc |percent }}</h4>
+<h4>{{ amount | currency :"INR" }}</h4>
+<h4>{{date }}</h4>
+<h4>{{date | date:'short' }}</h4>
+<h4>{{date | date :'dd/MM/yy'}}</h4>
+<h4>{{date | date :'shortDate'}}</h4>
+<h4>{{date | date :'shortTime'}}</h4><br>
 <h2>Custom Pipe convert USD to INR</h2>
-<!-- <h3>{{ usdamt | usdInr}}</h3>  -->
+<h4>{{ usdamt | usdInr:80}}</h4>

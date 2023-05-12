@@ -21,7 +21,7 @@ import { UsrInrPipe } from './pipes-demo/usr-inr.pipe';
 
 
 @NgModule({
-  declarations: [AppComponent, Directive1Directive, AlternatIfDiractive, UsrInrPipe,    // CommonErrorComponent,
+  declarations: [AppComponent, Directive1Directive, AlternatIfDiractive,     // CommonErrorComponent,
   ],
   imports: [
     BrowserModule, CoreModule, ErrorModuleModule, InputoutputdemoModule, ObservableDemoModule, EmployeeModule,
