@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subject, concat, interval } from 'rxjs';
+import { Observable, Subject, concat, interval, share } from 'rxjs';
 import {
   of, from, concatWith, merge, map, take, concatMap, mergeMap,
-  switchMap, takeUntil, forkJoin
+  switchMap, takeUntil, forkJoin, shareReplay
 } from 'rxjs';
 
 @Injectable({
@@ -71,17 +71,9 @@ export class UtilityService {
     return concatMapped$;
 
   }
-  concatMapWithAPI(): Observable<any> {
-    const breeds$ = of('sniffer', 'Pomerian', 'doberman');
-    const cntmap$ = breeds$.pipe(concatMap((breed) => {
-      const url = 'https://dog.ceo/api/breed/' + breed + '/list';
-      return this.http.get<any>(url);  //inner observable
-    })
-    );
-    return cntmap$;
-  }
+
   mergeMapOperator(): Observable<any> {
-    const breeds$ = of('sniffer', 'Pomerian', 'doberman');
+    const breeds$ = of('hound', 'mastiff', 'retriever');
     const mergemap$ = breeds$.pipe(mergeMap((breed) => {
       const url = 'https://dog.ceo/api/breed/' + breed + '/list';
       return this.http.get<any>(url);  //inner observable
@@ -91,20 +83,33 @@ export class UtilityService {
   }
   SwitchMapOperator(): Observable<any> {
     const breeds$ = of('sniffer', 'Pomerian', 'doberman');
-    const switchmap$ = breeds$.pipe(mergeMap((breed) => {
+    const switchmap$ = breeds$.pipe(switchMap((breed) => {
       const url = 'https://dog.ceo/api/breed/' + breed + '/list';
       return this.http.get<any>(url);  //inner observable
     })
     );
     return switchmap$;
   }
+  concatMapWithAPI(): Observable<any> {
+    const breeds$ = of('hound', 'mastiff', 'retriever');
+    const cntmap$ = breeds$.pipe(concatMap((breed) => {
+      const url = 'https://dog.ceo/api/breed/' + breed + '/list';
+      return this.http.get<any>(url);  //inner observable
+    })
+    );
+    return cntmap$;
+  }
   takeUntil() {
-    const source$ = interval(1000);
+    const source$ = interval(500);
     return source$;
   }
-  // getDogBreed(breed): Observable<any> {
-  //   const url = 'https://dog.ceo/api/breed/' + breed + '/list';
-  //   return this.http.get<any>(url);
-  // }
+  getDogBreed(breed: string): Observable<any> {
+    const url = 'https://dog.ceo/api/breed/' + breed + '/list';
+    return this.http.get<any>(url);
+  }
+  shareReply(): Observable<number> {
+    const source$ = interval(2000).pipe(take(6), shareReplay(3));
+    return source$;
+  }
 }
 

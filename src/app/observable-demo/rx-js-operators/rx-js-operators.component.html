@@ -30,5 +30,15 @@
     <button type="button" class="btn btn-primary" (click)="onClickTakeUntilOperator()">Take Until</button>
 </div><br>
 <div class="col-sm-offset-1 col-sm-10">
-    <button type="button" class="btn btn-primary" (click)="onClickForkJoinOOperator()">Fork Join</button>
+    <button type="button" class="btn btn-primary" (click)="onClickForkJoinOperator()">Fork Join</button>
 </div><br>
+<div class="col-sm-offset1 col-sm-10">
+    <button class="btn btn-primary" disabled (click)="onClickForkJoinOperator()">Debounce Time</button>
+    <br>
+    <!-- <input type="text" [(ngModel)]="searchText" placeholder="search  bread" (keyup)="search()" /> -->
+
+    {{ breeds$ | async | json }}
+</div>
+<div class="col-sm-offset-1 col-sm-10">
+    <button class="btn btn-primary" (click)="onClickShareReplyOperator()">Share Reply</button>
+</div>

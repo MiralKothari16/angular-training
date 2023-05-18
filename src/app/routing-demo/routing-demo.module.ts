@@ -5,7 +5,8 @@ import { UsersComponent } from './users/users.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ContainerComponent } from './container/container.component';
-import { UserComponent } from '../reactive-form/user/user.component';
+
+import { UserComponent } from './user/user.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },// localhost:4200
@@ -19,15 +20,17 @@ const appRoutes: Routes = [
     HomeComponent,
     UsersComponent,
     CategoriesComponent,
-    ContainerComponent
+    ContainerComponent,
+    UserComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forRoot(appRoutes)
   ],
   exports: [HomeComponent,
-    UsersComponent,
+    UserComponent,
     CategoriesComponent,
+    UsersComponent,
     ContainerComponent]
 })
 export class RoutingDemoModule { }

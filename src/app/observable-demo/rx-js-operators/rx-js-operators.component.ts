@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { UtilityService } from '../utility.service';
-import { Observable, Subscription, timer, take, takeUntil } from 'rxjs';
+import { Observable, Subscription, timer, take, takeUntil, forkJoin, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-rx-js-operators',
@@ -9,6 +9,9 @@ import { Observable, Subscription, timer, take, takeUntil } from 'rxjs';
 })
 export class RxJsOperatorsComponent {
   subscriptions: Subscription[] = [];
+  breeds$!: Observable<any>;
+  searchText!: string;
+  searchBreed$ = new Subject<any>();
 
   constructor(private _utilityservice: UtilityService) { }
 
@@ -53,7 +56,7 @@ export class RxJsOperatorsComponent {
     }));
   }
   onClickswitchmapOperator() {
-    this.subscriptions.push(this._utilityservice.mergeMapOperator().subscribe(resp => {
+    this.subscriptions.push(this._utilityservice.SwitchMapOperator().subscribe(resp => {
       console.log(resp);
     }));
   }
@@ -73,9 +76,34 @@ export class RxJsOperatorsComponent {
         console.log('Take Until operator called :- ', res);
       }));
   }
-  onClickForkJoinOOperator() {
-    //const obj1 = this._utilityservice.getDogBreed('Sniffer');
-    //
+  onClickForkJoinOperator() {
+    const obj1 = this._utilityservice.getDogBreed('hound');
+    const obj2 = this._utilityservice.getDogBreed('mastiff');
+    const obj3 = this._utilityservice.getDogBreed('retriever');
+
+    forkJoin([obj1, obj2, obj3]).subscribe(res => {
+      console.log('fork join data:', res);
+    },
+      error => {
+        console.log('Error in fork join data :', error);
+      });
+  }
+  search() {
+    this.searchBreed$.next(this.searchText)
+  }
+  onClickShareReplyOperator() {
+    this._utilityservice.shareReply().subscribe((res) => {
+      console.log('Obj1', res)
+    });
+    this._utilityservice.shareReply().subscribe((res) => {
+      console.log('obj2', res)
+    });
+    setTimeout(() => {
+
+      this._utilityservice.shareReply().subscribe((res) => {
+        console.log('obj3', res);
+      });
+    }, 1000);
   }
 }
 
